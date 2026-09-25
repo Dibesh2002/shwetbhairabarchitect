@@ -3,20 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="shwet.jpg" type="image">
-    <title>Projects - Shwet Bhairab Architect and Association</title>
+    <link rel="icon" href="shwet.jpg" type="image/jpeg">
+    <title>Projects | Architecture, Master Planning &amp; Urban Development in Nepal | Shwet Bhairab</title>
+    <meta name="description" content="Selected projects by Shwet Bhairab Architects &amp; Associates: residential design, government and institutional buildings, park and school master plans, and development plans across Nepal.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#00082b">
+    <link rel="canonical" href="https://shwetbhairab.com.np/projects.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Shwet Bhairab Architects &amp; Associates">
+    <meta property="og:title" content="Projects | Architecture, Master Planning &amp; Urban Development in Nepal | Shwet Bhairab">
+    <meta property="og:description" content="Selected projects by Shwet Bhairab Architects &amp; Associates: residential design, government and institutional buildings, park and school master plans, and development plans across Nepal.">
+    <meta property="og:url" content="https://shwetbhairab.com.np/projects.html">
+    <meta property="og:image" content="https://shwetbhairab.com.np/shwet.jpg">
+    <meta property="og:locale" content="en_NP">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Projects | Architecture, Master Planning &amp; Urban Development in Nepal | Shwet Bhairab">
+    <meta name="twitter:description" content="Selected projects by Shwet Bhairab Architects &amp; Associates: residential design, government and institutional buildings, park and school master plans, and development plans across Nepal.">
+    <meta name="twitter:image" content="https://shwetbhairab.com.np/shwet.jpg">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://shwetbhairab.com.np/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://shwetbhairab.com.np/projects.html"
+    }
+  ]
+}
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
-                <img src="./shwet.jpg" alt="Shwet Bhairab Logo" class="logo-img">
+                <img src="./shwet.jpg" alt="Shwet Bhairab Architects and Associates logo" class="logo-img">
                 <div class="logo-text">
-                <h1>Shwet Bhairab</h1>
-                <p>Architect & Association</p>
+                <span class="brand-name">Shwet Bhairab</span>
+                <p>Architects &amp; Associates</p>
                 </div>
             </div>
             <nav>
@@ -28,6 +63,7 @@
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="heritage.html">Heritage</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>
                     <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
                 </ul>
@@ -37,8 +73,16 @@
 
     <section class="page-banner-project">
         <div class="banner-content">
-            <h1 class="animate-on-scroll fade-in">Our Projects</h1>
-            <p class="animate-on-scroll fade-in delay-1">Explore our portfolio of innovative architectural designs.</p>
+            <h1 class="animate-on-scroll fade-in">Our Architecture &amp; Planning Projects</h1>
+            <p class="animate-on-scroll fade-in delay-1">Residential design, institutional buildings, master plans and development plans across Nepal.</p>
+        </div>
+    </section>
+
+    <section class="services-intro projects-intro">
+        <div class="container">
+            <div class="intro-content animate-on-scroll fade-in">
+                <p>Selected work from Shwet Bhairab Architects &amp; Associates across residential design, institutional and government buildings, park and school master plans, development plans and infrastructure studies. Looking for conservation work? See our <a href="heritage.html">heritage conservation</a> and <a href="urban-planning.html">urban planning</a> pages.</p>
+            </div>
         </div>
     </section>
 
@@ -50,6 +94,8 @@
                 <button class="filter-btn" data-filter="commercial">Commercial</button>
                 <button class="filter-btn" data-filter="institutional">Institutional</button>
                 <button class="filter-btn" data-filter="urban">Urban Planning</button>
+                <button class="filter-btn" data-filter="master">Master Planning</button>
+                <button class="filter-btn" data-filter="research">Research &amp; Studies</button>
             </div>
         </div>
     </section>
@@ -57,15 +103,15 @@
     <section class="projects-gallery">
         <div class="container">
             <div class="gallery-grid">
-                <!-- Residential Projects -->
-                <div class="gallery-item animate-on-scroll fade-in" data-category="institutional">
+                <!-- Projects (categories can hold several values, e.g. data-category="urban master") -->
+                <div class="gallery-item animate-on-scroll fade-in" data-category="institutional master">
                     <div class="project-image">
-                        <img src="./cunna.jpg" alt="Cunnadevi Secondary School">
+                        <img src="./cunna.jpg" alt="Cunnadevi Secondary School master plan, Bhaktapur" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-info">
                                 <h3>Cunnadevi Secondary School</h3>
                                 <p>Master Plan Preparation</p>
-                                <a href="#" class="view-project">View Details</a>
+                                <a href="#" class="view-project" data-project="Cunnadevi Secondary School">View Details</a>
                             </div>
                         </div>
                     </div>
@@ -73,12 +119,12 @@
                 
                 <div class="gallery-item animate-on-scroll fade-in" data-category="residential">
                     <div class="project-image">
-                        <img src="7.jpg" alt="Residential Building Extension">
+                        <img src="7.jpg" alt="Residential building extension and modification" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-info">
                                 <h3>Residential Building Extension</h3>
                                 <p>Extension/Modification</p>
-                                <a href="#" class="view-project">View Details</a>
+                                <a href="#" class="view-project" data-project="Residential Building Extension">View Details</a>
                             </div>
                         </div>
                     </div>
@@ -86,12 +132,12 @@
 
                 <div class="gallery-item animate-on-scroll fade-in" data-category="commercial">
                     <div class="project-image">
-                        <img src="automobile.jpg" alt="Retail Center">
+                        <img src="automobile.jpg" alt="Automobile showroom design" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-info">
                                 <h3>Design of Automobile Showroom</h3>
                                 <p>Commercial Design</p>
-                                <a href="#" class="view-project">View Details</a>
+                                <a href="#" class="view-project" data-project="Design of Automobile Showroom">View Details</a>
                             </div>
                         </div>
                     </div>
@@ -99,66 +145,66 @@
                 
                 <div class="gallery-item animate-on-scroll fade-in" data-category="residential">
                     <div class="project-image">
-                        <img src="3.jpg" alt="Luxury Villa Project">
+                        <img src="3.jpg" alt="Residential bungalow design" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-info">
                                 <h3>Residential Bungalow Design</h3>
                                 <p>Multi-family Residential</p>
-                                <a href="#" class="view-project">View Details</a>
+                                <a href="#" class="view-project" data-project="Residential Bungalow Design">View Details</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Commercial Projects -->
-                <div class="gallery-item animate-on-scroll fade-in" data-category="commercial">
+                <div class="gallery-item animate-on-scroll fade-in" data-category="urban master">
                     <div class="project-image">
-                        <img src="Kamal.jpg" alt="Palthani Kamla Pokhari Park">
+                        <img src="Kamal.jpg" alt="Palthani Kamla Pokhari Park master plan" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-info">
                                 <h3>Palthani Kamla Pokhari Park</h3>
                                 <p>Master Plan Preparation</p>
-                                <a href="#" class="view-project">View Details</a>
+                                <a href="#" class="view-project" data-project="Palthani Kamla Pokhari Park">View Details</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="gallery-item animate-on-scroll fade-in" data-category="commercial">
+                <div class="gallery-item animate-on-scroll fade-in" data-category="institutional">
                     <div class="project-image">
-                        <img src="water.jpeg" alt="Nepal Water Supply Corporation">
+                        <img src="water.jpeg" alt="Nepal Water Supply Corporation building design" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-info">
                                 <h3>Nepal Water Supply Corporation</h3>
                                 <p>Water Infrastructure</p>
-                                <a href="#" class="view-project">View Details</a>
+                                <a href="#" class="view-project" data-project="Nepal Water Supply Corporation">View Details</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="gallery-item animate-on-scroll fade-in" data-category="commercial">
+                <div class="gallery-item animate-on-scroll fade-in" data-category="urban">
                     <div class="project-image">
-                        <img src="chitwan.jpg" alt="Boutique Hotel">
+                        <img src="chitwan.jpg" alt="Park design in Chitwan" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-info">
                                 <h3>Park Design in Chitwan</h3>
                                 <p>Park Design</p>
-                                <a href="#" class="view-project">View Details</a>
+                                <a href="#" class="view-project" data-project="Park Design in Chitwan">View Details</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Institutional Projects -->
-                 <div class="gallery-item animate-on-scroll fade-in" data-category="urban">
+                 <div class="gallery-item animate-on-scroll fade-in" data-category="urban master">
                     <div class="project-image">
-                        <img src="Manebhanjyang.jpg" alt="University Campus Building">
+                        <img src="Manebhanjyang.jpg" alt="Physical development plan for Mane Bhajyang, Okhaldhunga" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-info">
                                 <h3>Physical Development Plan</h3>
                                 <p>Development Plan Work </p>
-                                <a href="#" class="view-project">View Details</a>
+                                <a href="#" class="view-project" data-project="Physical Development Plan">View Details</a>
                             </div>
                         </div>
                     </div>
@@ -166,38 +212,38 @@
 
                 <div class="gallery-item animate-on-scroll fade-in" data-category="residential">
                     <div class="project-image">
-                        <img src="4.jpg" alt="Eco-Friendly Residence">
+                        <img src="4.jpg" alt="Residential bungalow with sustainable design features" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-info">
                                 <h3>Residential Bungalow</h3>
                                 <p>Sustainable Design</p>
-                                <a href="#" class="view-project">View Details</a>
+                                <a href="#" class="view-project" data-project="Residential Bungalow">View Details</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="gallery-item animate-on-scroll fade-in" data-category="urban">
+                <div class="gallery-item animate-on-scroll fade-in" data-category="research">
                     <div class="project-image">
-                        <img src="nepal.jpg" alt="Preparation of Irrigation Regulation Amendment">
+                        <img src="nepal.jpg" alt="Preparation of irrigation regulation amendment, 2071/2072" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-info">
                                 <h3>Preparation of Irrigation Regulation Amendment</h3>
                                 <p>2071/2072</p>
-                                <a href="#" class="view-project">View Details</a>
+                                <a href="#" class="view-project" data-project="Preparation of Irrigation Regulation Amendment">View Details</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                  <div class="gallery-item animate-on-scroll fade-in" data-category="commercial">
+                  <div class="gallery-item animate-on-scroll fade-in" data-category="institutional">
                     <div class="project-image">
-                        <img src="6.jpg" alt="Model Integrated Governmental Building">
+                        <img src="6.jpg" alt="Model integrated governmental building proposed design" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-info">
                                 <h3>Model Integrated Governmental Building</h3>
                                 <p>Proposed Design</p>
-                                <a href="#" class="view-project">View Details</a>
+                                <a href="#" class="view-project" data-project="Model Integrated Governmental Building">View Details</a>
                             </div>
                         </div>
                     </div>
@@ -206,14 +252,14 @@
                 
                 
                 <!-- Urban Planning Projects -->
-                <div class="gallery-item animate-on-scroll fade-in" data-category="urban">
+                <div class="gallery-item animate-on-scroll fade-in" data-category="research">
                     <div class="project-image">
-                        <img src="Baitadi.jpg" alt="Waterfront Development">
+                        <img src="Baitadi.jpg" alt="Water supply and sanitation project design, Baitadi" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-info">
                                 <h3>Water supply and sanitation Project</h3>
                                 <p>Design & Engineering study</p>
-                                <a href="#" class="view-project">View Details</a>
+                                <a href="#" class="view-project" data-project="Water supply and sanitation Project">View Details</a>
                             </div>
                         </div>
                     </div>
@@ -221,25 +267,25 @@
                 
                 <div class="gallery-item animate-on-scroll fade-in" data-category="residential">
                     <div class="project-image">
-                        <img src="5.jpg" alt="Design of Residential Building Balkot">
+                        <img src="5.jpg" alt="Residential building design in Balkot" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-info">
                                 <h3>Design of Residential Building Balkot</h3>
-                                <p>Residential Buildingn</p>
-                                <a href="#" class="view-project">View Details</a>
+                                <p>Residential Building</p>
+                                <a href="#" class="view-project" data-project="Design of Residential Building Balkot">View Details</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="gallery-item animate-on-scroll fade-in" data-category="commercial">
+                <div class="gallery-item animate-on-scroll fade-in" data-category="institutional">
                     <div class="project-image">
-                        <img src="dhangadi.jpg" alt="Transit-Oriented Development">
+                        <img src="dhangadi.jpg" alt="Nepal Water Supply Corporation branch office, Dhangadhi" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-info">
                                 <h3>Nepal Water Supply Corporation</h3>
                                 <p>Branch Office, Dhangadhi</p>
-                                <a href="#" class="view-project">View Details</a>
+                                <a href="#" class="view-project" data-project="Nepal Water Supply Corporation, Dhangadhi Branch Office">View Details</a>
                             </div>
                         </div>
                     </div>
@@ -250,13 +296,13 @@
         </div>
     </section>
 
-    <section class="project-modal">
-        <div class="modal-content">
-            <span class="close-modal"><i class="fas fa-times"></i></span>
+    <section class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-label="Project details">
+        <div class="modal-container">
+            <span class="modal-close" role="button" aria-label="Close"><i class="fas fa-times"></i></span>
             <div class="modal-body">
                 <div class="modal-gallery">
                     <div class="main-image">
-                        <img src="/placeholder.svg" alt="Project Image" id="modal-main-image">
+                        <img src="shwet.jpg" alt="Project image" id="modal-main-image">
                     </div>
                     <div class="thumbnail-gallery">
                         <!-- Thumbnails will be added dynamically -->
@@ -302,10 +348,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="./shwet.jpg" alt="Swet Bhairab Logo" class="footer-logo-img">
+                    <img src="./shwet.jpg" alt="Shwet Bhairab Architects and Associates logo" class="footer-logo-img">
                     <div>
                         <h2>Shwet Bhairab</h2>
-                        <p>Architect & Association</p>
+                        <p>Architects &amp; Associates</p>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -315,6 +361,9 @@
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="projects.html">Projects</a></li>
+                        <li><a href="heritage.html">Heritage Conservation</a></li>
+                        <li><a href="urban-planning.html">Urban Planning</a></li>
+                        <li><a href="residential-architecture.html">House Design</a></li>
                         <li><a href="testimonials.html">Testimonials</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -328,15 +377,15 @@
                 <div class="footer-social">
                     <h3>Follow Us</h3>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/profile.php?id=100029115229688"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/ram-shrestha-944b81296/"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100029115229688" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/ram-shrestha-944b81296/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Shwet Bhairab Architect and Association. All Rights Reserved.</p>
+                <p>&copy; 2026 Shwet Bhairab Architects &amp; Associates. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

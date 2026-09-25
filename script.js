@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 const filter = this.getAttribute('data-filter');
                 galleryItems.forEach(item => {
-                    const match = filter === 'all' || item.getAttribute('data-category') === filter;
+                    const match = filter === 'all' || (item.getAttribute('data-category') || '').split(' ').includes(filter);
                     item.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
                     if (match) {
                         item.style.display = 'block';
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
     /* ── Project Modal ───────────────────────────────────── */
     const projectDatabase = {
         'Cunnadevi Secondary School': {
-            category: 'Residential',
+            category: 'Institutional / Master Plan',
             location: 'Nagarkot, Bhaktapur',
             year: '2071-2072',
             size: '2,500 sq.m',
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
             images: ['cunna.jpg','cunna2.jpg','cunna3.jpg','cunna4.jpg','cunna5.jpg']
         },
         'Water supply and sanitation Project': {
-            category: 'Commercial',
+            category: 'Water Supply & Sanitation',
             location: 'Kulau VDC Baitadi',
             year: '2071-2072',
             size: '11.609 km',
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
             images: ['Baitadi.jpg','Baitadi.jpg','Baitadi.jpg','Baitadi.jpg','Baitadi.jpg']
         },
         'Physical Development Plan': {
-            category: 'urban',
+            category: 'Urban Planning / Development Plan',
             location: 'Mane Bhajyang, Okhaldhunga',
             year: '2071-2072',
             size: '3,200 sq.m',
@@ -216,7 +216,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (projectModal) {
         viewProjectBtns.forEach(btn => {
-            btn.addEventListener('click', function () {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
                 const projectName = this.getAttribute('data-project');
                 const project = projectDatabase[projectName];
 
@@ -243,13 +244,14 @@ document.addEventListener('DOMContentLoaded', function () {
                         thumbGallery.appendChild(div);
                     });
                 } else {
-                    const imgSrc = this.closest('.project-overlay').previousElementSibling.querySelector('img')?.getAttribute('src') || '';
+                    const imgSrc = this.closest('.project-image').querySelector('img')?.getAttribute('src') || '';
                     document.getElementById('modal-title').textContent    = projectName || 'Project Details';
-                    document.getElementById('modal-category').textContent = 'Architecture';
+                    const cardType = this.parentElement.querySelector('p');
+                    document.getElementById('modal-category').textContent = cardType ? cardType.textContent.trim() : 'Architecture';
                     document.getElementById('modal-location').textContent = 'Nepal';
-                    document.getElementById('modal-year').textContent     = '2023';
-                    document.getElementById('modal-size').textContent     = 'TBD';
-                    document.getElementById('modal-description').textContent = 'Project details coming soon.';
+                    document.getElementById('modal-year').textContent     = 'On request';
+                    document.getElementById('modal-size').textContent     = 'On request';
+                    document.getElementById('modal-description').textContent = 'Full details of this project, including drawings and scope of work, are available on request. Contact us to discuss a similar project.';
                     document.getElementById('modal-main-image').setAttribute('src', imgSrc);
 
                     const thumbGallery = document.querySelector('.thumbnail-gallery');
@@ -390,10 +392,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    /* ── Mobile call / WhatsApp bar ──────────────────────── */
+    document.body.insertAdjacentHTML('beforeend',
+        '<div class="mobile-contact-bar">' +
+        '<a class="mcb-call" href="tel:+9779841796798"><i class="fas fa-phone"></i> Call</a>' +
+        '<a class="mcb-wa" href="https://wa.me/9779841796798" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>' +
+        '</div>');
+
     /* ── Smooth anchor scroll ────────────────────────────── */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            if (!href || href.length < 2) return;
+            const target = document.querySelector(href);
             if (target) {
                 e.preventDefault();
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
